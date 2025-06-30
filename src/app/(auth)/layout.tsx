@@ -14,7 +14,7 @@ const Layout = ({ children }: Children) => {
         </div>
       </div>
 
-      <div className="flex-1 w-full h-full flex-items-center justify-center p-4">
+      <div className="flex-1 w-full h-full flex items-center justify-center p-4">
         {children}
       </div>
     </main>
