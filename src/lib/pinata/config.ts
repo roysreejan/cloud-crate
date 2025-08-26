@@ -1,12 +1,8 @@
-import PinataSDK from "@pinata/sdk";
+"server only";
 
-if (!process.env.PINATA_JWT) {
-  throw new Error("PINATA_JWT environment variable is required");
-}
+import { PinataSDK } from "pinata"
 
 export const pinata = new PinataSDK({
-  pinataJWTKey: process.env.PINATA_JWT,
-});
-
-export const pinataGateway =
-  process.env.NEXT_PUBLIC_GATEWAY_URL || "https://gateway.pinata.cloud";
+  pinataJwt: `${process.env.PINATA_JWT}`,
+  pinataGateway: `${process.env.NEXT_PUBLIC_GATEWAY_URL}`
+})
